@@ -6,13 +6,13 @@ class unique {
 private:
     T* t;
     unique& operator= (const unique&) = delete;
+    unique(const unique&) = delete;
 public:
-       
+    unique& operator= (const unique&) = delete;
+    unique(const unique&) = delete;
     unique(const T& t_) : t{ new T{t_} } {};
     ~unique() {
-        if (t) {
-            delete t;
-        }
+            delete t;     
     }
 
     T& operator*() const {
