@@ -5,8 +5,7 @@ template<class T>
 class unique {
 private:
     T* t;
-    unique& operator= (const unique&) = delete;
-    unique(const unique&) = delete;
+
 public:
     unique& operator= (const unique&) = delete;
     unique(const unique&) = delete;
